@@ -121,9 +121,9 @@ function renderExp(){
     </div>
     <div class="result-body">
       <div class="potions" style="gap:28px;align-items:center;">
-        <div style="text-align:center"><img src="assets/Bigexppot.png" alt="grande"><div style="margin-top:8px;font-weight:700;color:var(--accent)">× ${fmt(p.grandes)}</div><div style="font-size:12px;color:var(--muted)">Grande</div></div>
-        <div style="text-align:center"><img src="assets/Medexppot.png" alt="média"><div style="margin-top:8px;font-weight:700;color:var(--accent)">× ${fmt(p.medias)}</div><div style="font-size:12px;color:var(--muted)">Média</div></div>
-        <div style="text-align:center"><img src="assets/Smallexppot.png" alt="pequena"><div style="margin-top:8px;font-weight:700;color:var(--accent)">× ${fmt(p.pequenas)}</div><div style="font-size:12px;color:var(--muted)">Pequena</div></div>
+        <div style="text-align:center"><img src="Bigexppot.png" alt="grande"><div style="margin-top:8px;font-weight:700;color:var(--accent)">× ${fmt(p.grandes)}</div><div style="font-size:12px;color:var(--muted)">Grande</div></div>
+        <div style="text-align:center"><img src="Medexppot.png" alt="média"><div style="margin-top:8px;font-weight:700;color:var(--accent)">× ${fmt(p.medias)}</div><div style="font-size:12px;color:var(--muted)">Média</div></div>
+        <div style="text-align:center"><img src="Smallexppot.png" alt="pequena"><div style="margin-top:8px;font-weight:700;color:var(--accent)">× ${fmt(p.pequenas)}</div><div style="font-size:12px;color:var(--muted)">Pequena</div></div>
       </div>
     </div>
   `;
@@ -259,3 +259,4 @@ window.addEventListener('load', ()=>{
 
 // Expose some functions for debugging (optional)
 window._GLA = {xp_needed, potions_for_xp, expected_attempts};
+
