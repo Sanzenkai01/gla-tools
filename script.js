@@ -211,7 +211,7 @@ function calcularCristais(){
   html += `<div><strong>${slot}</strong> — Nível atual +${current}</div></div>`;
 
   const transfer = get_transfer_cost(slot, current);
-  html += `<div style="margin-bottom:8px;"><img src="${gemImg}" alt="gema" class="small-icon"> Custo para transferir o boost: <strong>${transfer}</strong> gemas</div>`;
+  html += `<div style="margin-bottom:8px;">Custo para transferir o boost: <img src="${gemImg}" alt="gema" class="small-icon"> <strong>${transfer}</strong> gemas</div>`;
 
   if(resultado.length===0) html += '<div>Nenhum nível acima do atual.</div>';
   resultado.forEach(r => {
@@ -271,3 +271,4 @@ window.addEventListener('load', ()=>{
 
 // Expose some functions for debugging (optional)
 window._GLA = {xp_needed, potions_for_xp, expected_attempts};
+
