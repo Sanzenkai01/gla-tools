@@ -34,21 +34,35 @@ body{margin:0;font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;background:v
   background:var(--glass);
   color:var(--text);
   outline:1px solid rgba(255,255,255,0.03);
+  /* Hint the browser to render native UI in dark mode for form controls */
+  color-scheme: dark;
+  -webkit-text-fill-color: var(--text);
 }
 
-/* Garantir que as opções do <select> sejam legíveis em todos os navegadores */
+/* Ensure dropdown options are readable on platforms that allow styling */
 .inputs select option{
-  /* texto escuro em dropdowns nativos claros (fallback) */
-  color:#0b1220;
-  background-color:#ffffff;
+  color:var(--text) !important; /* keep text light on dark background */
+  background-color:var(--card) !important;
 }
-/* Para navegadores/ambientes que suportam estilizar opções em tema escuro */
-@media (prefers-color-scheme: dark){
-  .inputs select option{
-    color:var(--text);
-    background-color:var(--card);
-  }
+
+/* Additional fixes for Firefox/Chromium where native dropdowns may still show light backgrounds */
+.inputs select{
+  /* force a dark dropdown on supporting browsers */
+  background-color:var(--card);
+  color:var(--text);
 }
+
+/* ms edge / ie: invert the expand arrow color if present */
+.inputs select::-ms-expand{filter:invert(1);}
+
+@media (prefers-color-scheme: light){
+  /* if user prefers light, keep options dark text on light background */
+  .inputs select option{ color:#0b1220 !important; background-color:#ffffff !important; }
+}
+
+.cr-values{display:flex;gap:8px;flex-wrap:wrap}
+
+.cr-values{display:flex;gap:8px;flex-wrap:wrap}
 .cr-values{display:flex;gap:8px;flex-wrap:wrap}
 .primary{background:var(--accent);border:0;padding:10px 14px;border-radius:8px;color:#000;font-weight:700;cursor:pointer}
 .result{min-height:120px;white-space:pre-wrap;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;color:var(--muted);}
