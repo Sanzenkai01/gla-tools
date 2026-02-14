@@ -1,0 +1,18 @@
+Uma scrollbar na calculadora de receitas.
+
+Um quantidade media/maxima de cristais por up (Pegar os icones dos cristais para questões esteticas)
+
+(Média)
+??
+
+(Maxima)
+Emblema | Capacete | Calça | Peito | Arma | Colar | Total
+Cristais do Céu (1-4) 36 / 36 / 36 / 72 / 72 / 72 / 324
+Cristais do Sábio (4-8) 60 / 60 / 60 / 120 / 120 / 120 / 540
+Cristais Carmesim (8-12) 102 / 102 / 102 / 204 / 204 / 204 / 918
+Cristais Radiante (12-16) 196 / 196 / 196 / 392 / 392 / 392 / 1764
+
+Uma opção de configurar um valor (em berry) para o cristal utilizado (opcional, adiciona um valor no resultado).
+
+Emblema, capacete e calça = 2 cristais por up
+Peito, Arma e Colar = 4 cristais por up

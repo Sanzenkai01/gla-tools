@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GLA Tools — Web</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <div class="title">
+          <div class="logo"><img src="assets/logo.png" alt="GLA logo"></div>
+          <div>
+            <h1>GLA Tools</h1>
+            <p class="subtitle">Calculadoras — Experiência · Receitas · Cristais</p>
+          </div>
+        </div>
+        <nav class="tabs">
+          <button data-tab="exp" class="tab active">📊 Experiência</button>
+          <button data-tab="receitas" class="tab">🍲 Receitas</button>
+          <button data-tab="cristais" class="tab">💎 Cristais</button>
+        </nav>
+      </header>
+
+      <section id="exp" class="panel active">
+        <h2>Calculadora de Experiência</h2>
+        <div class="card inputs">
+          <label>Nível inicial <input id="exp-nivel-inicio" type="number" min="1" max="140" value="1"></label>
+          <label>Nível final <input id="exp-nivel-fim" type="number" min="1" max="140" value="70"></label>
+          <label>Tier
+            <select id="exp-tier">
+              <option>Diamante</option>
+              <option>Ouro</option>
+              <option>Prata</option>
+              <option>Bronze</option>
+            </select>
+          </label>
+          <button id="exp-calc" class="primary">Calcular</button>
+        </div>
+        <div class="card result" id="exp-result">
+          <!-- resultado dinâmico -->
+        </div>
+      </section>
+
+      <section id="receitas" class="panel">
+        <h2>Calculadora de Receitas</h2>
+        <div class="card inputs">
+          <label>Receita
+            <select id="rcp-select"></select>
+          </label>
+          <label>Quantidade <input id="rcp-qtd" type="number" value="100" min="1"></label>
+          <label>Valor unitário (berry) <input id="rcp-valor" type="number" value="3200" min="0"></label>
+          <button id="rcp-calc" class="primary">Calcular</button>
+        </div>
+        <div class="card result" id="rcp-result"></div>
+      </section>
+
+      <section id="cristais" class="panel">
+        <h2>Calculadora de Cristais</h2>
+        <div class="card inputs">
+          <label>Equipamento
+            <select id="cr-slot">
+              <option>Emblema</option>
+              <option>Capacete</option>
+              <option>Calça</option>
+              <option>Peito</option>
+              <option>Arma</option>
+              <option>Colar</option>
+            </select>
+          </label>
+          <label>Nível atual (0–16) <input id="cr-level" type="number" min="0" max="16" value="0"></label>
+          <div class="cr-values">
+            <label>Céu <input id="val-ceu" type="number" value="0" min="0"></label>
+            <label>Sábio <input id="val-sabio" type="number" value="0" min="0"></label>
+            <label>Carmesim <input id="val-carmesim" type="number" value="0" min="0"></label>
+            <label>Radiante <input id="val-radiante" type="number" value="0" min="0"></label>
+          </div>
+          <button id="cr-calc" class="primary">Calcular</button>
+        </div>
+        <div class="card result" id="cr-result"></div>
+      </section>
+
+      <footer class="app-footer">
+        <div class="footer-inner">
+          <img src="assets/logo.png" alt="logo" class="footer-logo"> <small>Desenvolvido por Liniker</small>
+        </div>
+        <div class="deploy-note">Site pronto para publicar no <strong>GitHub Pages</strong>.</div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
